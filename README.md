@@ -24,4 +24,6 @@ Dificuldade: Hard
 ![315](315.%20Count%20of%20Smaller%20Numbers%20After%20Self/315.jpeg)
 Dificuldade: Hard
 
+## [Apresentação](https://youtu.be/1WqIP7agdeQ)
+
 **Linguagem**: Python<br>
