@@ -1,0 +1,22 @@
+class Solution:
+    def smallestDistancePair(self, nums, k):
+        nums.sort()
+
+        def contar_pares(distancia):
+            contagem = 0
+            esquerda = 0
+            for direita in range(1, len(nums)):
+                while nums[direita] - nums[esquerda] > distancia:
+                    esquerda += 1
+                contagem += direita - esquerda
+            return contagem
+        
+        esquerda, direita = 0, nums[-1] - nums[0]
+        while esquerda < direita:
+            meio = (esquerda + direita) // 2
+            if contar_pares(meio) >= k:
+                direita = meio
+            else:
+                esquerda = meio + 1
+
+        return esquerda

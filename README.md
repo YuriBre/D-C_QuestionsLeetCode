@@ -1,45 +1,23 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Dividir & Conquistar
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 45<br>
+**Conteúdo da Disciplina**: Dividir e Conquistar<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 18/0098683 |  Breno Yuri Barbosa Gomes |
+| 21/1063176  |  Joyce Dionizio de Mesquita |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Esse projeto tem o objetivo de realizar problemas de média e alta complexidade no juíz LeetCode. Os exercícios serão resolvidos com base no conteúdo do conteúdo Dividir e Conquistar.
 
-## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
-
-## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+## 1985. Find the Kth Largest Integer in the Array
 
 
+## 719. Find K-th Smallest Pair Distance
+
+## 315. Count of Smaller Numbers After Self
 
 
+**Linguagem**: Python<br>

@@ -1,0 +1,57 @@
+class Solution:
+    def kthLargestNumber(self, numeros, k):
+        
+        # Função que particiona a lista em 3 partes: menores, iguais e maiores que o pivô
+        def particionar(numeros, pivo):
+            menores, maiores, iguais = [], [], []
+            for numero in numeros:
+                valor_numero = int(numero)
+                if valor_numero < int(pivo):
+                    menores.append(numero)
+                elif valor_numero > int(pivo):
+                    maiores.append(numero)
+                else:
+                    iguais.append(numero)
+            return menores, iguais, maiores
+        
+        # Função principal que vai buscando o K-ésimo maior número
+        def selecionar_k(numeros, k_pos):
+            if len(numeros) == 1:
+                return numeros[0]
+            
+            # Escolhe o pivô usando Mediana das Medianas
+            pivo = mediana_das_medianas(numeros)
+            menores, iguais, maiores = particionar(numeros, pivo)
+            
+            # Verifica em qual parte está o K-ésimo maior número
+            if k_pos <= len(menores):
+                return selecionar_k(menores, k_pos)
+            elif k_pos > len(menores) + len(iguais):
+                return selecionar_k(maiores, k_pos - len(menores) - len(iguais))
+            else:
+                return iguais[0]
+
+        # Função que encontra a mediana das medianas
+        def mediana_das_medianas(numeros):
+            # Se for uma lista pequena (5 ou menos), pega a mediana direta
+            if len(numeros) <= 5:
+                return mediana(numeros)
+            
+            # Divide a lista em grupos de 5
+            grupos = [numeros[i:i+5] for i in range(0, len(numeros), 5)]
+            medianas = [mediana(grupo) for grupo in grupos]
+            
+            # Chama a recursão para achar a mediana das medianas
+            return mediana_das_medianas(medianas)
+        
+        # Função para calcular a mediana de um grupo
+        def mediana(lista):
+            lista_ordenada = sorted(lista, key=lambda x: int(x))
+            tamanho = len(lista_ordenada)
+            if tamanho % 2 == 1:
+                return lista_ordenada[tamanho // 2]
+            else:
+                return lista_ordenada[tamanho // 2 - 1]
+        
+        # Chama a função principal para achar o K-ésimo maior número
+        return selecionar_k(numeros, len(numeros) - k + 1)
