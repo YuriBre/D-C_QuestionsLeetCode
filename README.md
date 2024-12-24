@@ -21,7 +21,7 @@ Dificulade: Medium
 Dificuldade: Hard
 
 ## [315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
-![315](315.%20Count%20of%20Smaller%20Numbers%20After%20Self/\315.jpeg)
+![315](315.%20Count%20of%20Smaller%20Numbers%20After%20Self/315.jpeg)
 Dificuldade: Hard
 
 **Linguagem**: Python<br>
